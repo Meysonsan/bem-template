@@ -9,7 +9,7 @@ body{
 }
 .main {
 	height: 100vh;
-	background-image: url('../../img/header/bg-header.png');
+	background-image: url('../img/header/bg-header.png');
 	background-position: center;
 	background-size: cover;
 
@@ -18,7 +18,7 @@ body{
 	justify-content: space-between;
 
 	&__logo {
-		background-image: url('../../img/header/logo.png');
+		background-image: url('../img/header/logo.png');
 		width: 196px;
 		height: 124px;
 		align-self: center;
@@ -44,7 +44,7 @@ body{
 	&__arrow {
 		width: 20px;
 		height: 20px;
-		background: url('../../img/header/arrow-down.png') no-repeat center center;
+		background: url('../img/header/arrow-down.png') no-repeat center center;
 		line-height: 20px;
 		transition: all 0.3s;
 		color: #00000000;
@@ -137,7 +137,7 @@ body{
 }
 .partners {
 	box-sizing: border-box;
-	background-image: url('../../img/partners/partners-bg.png');
+	background-image: url('../img/partners/partners-bg.png');
 	background-position: center;
 	background-size: cover;
 	padding: 96px 0;
