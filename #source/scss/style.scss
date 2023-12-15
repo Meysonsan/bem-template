@@ -1,6 +1,9 @@
 @import "nullstyle.scss";
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+html {
+	scroll-behavior: smooth;
+  }
 body{
 	font-family: Lato;
 }
@@ -8,19 +11,16 @@ body{
 	padding: 100px 0 80px 0;
 }
 .main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
 	height: 100vh;
 	background-image: url('../img/header/bg-header.png');
 	background-position: center;
 	background-size: cover;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
 	&__logo {
-		background-image: url('../img/header/logo.png');
-		width: 196px;
-		height: 124px;
 		align-self: center;
 	}
 	&__title {
@@ -36,21 +36,20 @@ body{
 		text-transform: lowercase;
 	}
 	&__button-rm {
-		margin: 0 auto;
+		align-self: center;
 	}
 	&__button-link--white {
 		color: #fff;
 	}
 	&__arrow {
+		align-self: center;
 		width: 20px;
 		height: 20px;
 		background: url('../img/header/arrow-down.png') no-repeat center center;
 		line-height: 20px;
 		transition: all 0.3s;
 		color: #00000000;
-		align-self: center;
 	  }
-
 }
 .about {
 	&__body {
@@ -63,6 +62,9 @@ body{
 	&__navigation {
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
 		margin-bottom: 132px;
+	}
+	&__nav-size {
+		width: 386px;
 	}
 	&__title {
 		margin: 0px 0px 32px 0px;
@@ -92,12 +94,12 @@ body{
 	}
 }
 .portfolio {
-	background-color: #f3f3f3;
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
+	background-color: #f3f3f3;
+	
 	&__body {
 		padding: 108px 0 62px 0;
 		max-width: 1200px;
@@ -115,15 +117,17 @@ body{
 	&__navigation {
 		margin-bottom: 132px;
 	}
+	&__nav-size {
+		width: 300px;
+	}
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 28px;
 		margin-bottom: 66px;
 	}
 	&__item {
-		flex: 0 0 44.6666666%;
+		margin: 14px;
 		width: 536px;
 		height: 362px;
 		background-color: #eaeaea;
@@ -136,20 +140,21 @@ body{
 	}
 }
 .partners {
+	display: flex;
+	justify-content: center;
+
 	box-sizing: border-box;
 	background-image: url('../img/partners/partners-bg.png');
 	background-position: center;
 	background-size: cover;
 	padding: 96px 0;
 
-	display: flex;
-	justify-content: center;
-
 	&__body {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		height: 186px;
+		width: 600px;
 	}
 	&__title {
 		font-size: 30px;
@@ -159,9 +164,10 @@ body{
 	}
 	&__row {
 		display: flex;
-		height: 64px;
-		gap: 116px;
+		flex-wrap: wrap;
+		justify-content: space-between;
 		align-items: center;
+		height: 64px;
 	}
 	&__logo-w {
 		height: 47px;
@@ -180,14 +186,132 @@ body{
 		width: 111px;
 	}
 }
+.contact {
+	display: flex;
+	justify-content: center;
+	padding: 182px 0 102px 0;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 900px;
+		height: 542px;
+	}
+	&__title {
+		margin: 0px 0px 32px 0px;
+		font-weight: 700;
+		padding: 0px 0px 36px 0px;
+		&::after {
+			width: 82px;
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		height: 356px;
+	}
+	&__form-element {
+		display: flex;
+		flex-wrap: wrap;
+    	justify-content: space-between;
+		width: 382px;
+	}
+	&__lable {
+		font-size: 14px;
+		line-height: 48px;
+		font-weight: 700;
+	}
+	&__form-ud {
+		height: 84px;
+		width: 160px;
+		margin-bottom: 54px;
+	}
+	&__form-message {
+		width: 382px;
+		margin-bottom: 24px;
+	}
+	&__submit {
+		margin-left: 346px;
+		background-color: #00000000;
+		font-weight:700;
+		line-height: 32px;
+	}
+	&__info {
+		height: 356px;
+		width: 296px;
+		line-height: 1.8;
+	}
+	&__description {
+		margin-bottom: 32px;
+	}
+	&__details {
+		font-weight: 700;
+	}
+	&__links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 64px;
+		width: 82px;
+	}
+	&__sm-link {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 18px;
+		border: 2px solid #000;
+		border-radius: 50%;
+		height: 34px;
+		width: 34px;
+		color: #000;
+	}
+	&__light {
+		font-size: 14px;
+		font-weight: 300;
+	}
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 32px 0 48px 0;
+
+	height: 274px;
+	background-color: #3c3c3c;
+
+	&__logo {
+		align-self: center;
+		scale: 0.8;
+		filter: grayscale(100%);
+	}
+	&__sm-links {
+		display: flex;
+		justify-content: space-between;
+		align-self: center;
+		width: 272px;
+		
+	}
+	&__link {
+		font-weight: 400;
+		color: #a4a4a4;
+	}
+	&__copyright {
+		text-align: center;
+		color: #6c6c6c;
+	}
+	
+}
 .navigation {
 	display: flex;
-	height: 58px;
 	justify-content: center;
+	height: 58px;
 
 	&__menu {
 		display: flex;
-		gap: 48px;
+		justify-content: space-between;
+		
 	}
 	&__item-link {
 		display: block;
@@ -201,11 +325,11 @@ body{
 	}
 }
 .title {
+	position: relative;
+	text-align: center;
 	font-size: 34px;
 	text-transform: uppercase;
 	letter-spacing: 8px;
-	position: relative;
-	text-align: center;
 	line-height: 1.4;
 	&:after{
 		content:'';
@@ -215,29 +339,30 @@ body{
 		left: 50%;
 		transform: translateX(-50%);
 	}
-}
-.title--white {
-	color: #fff;
-	&::after {
-		background-color: #fff;
+	&--white {
+		color: #fff;
+		&::after {
+			background-color: #fff;
+		}
 	}
-}
-.title--black {
-	color: #000;
-	&::after {
-		background-color: #000;
+	&--black {
+		color: #000;
+		&::after {
+			background-color: #000;
+		}
 	}
 }
 .item-about {
 	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 		margin: 0px auto 40px auto;
 		border-radius: 50%;
 		width: 92px;
 		height: 92px;
 		border: 2px solid #f1f1f1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 	&__title {
 		text-align: center;
@@ -254,23 +379,40 @@ body{
 		font-weight: 300;
 		font-size: 14px;
 	}
+	&--transform {
+		transform: translateX(14%)
+	}
 }
 .button-rm {
+	text-align: center;
 	height: 48px;
 	width: 182px;
 	line-height: 48px;
-	text-align: center;
 	&__link {
 		display: block;
 		font-size: 16px;
 	}
+	&--white {
+		border: 1px solid #fff;
+	}
+	&--black {
+		border: 1px solid #000;
+	}
 }
-.button-rm--white {
-	border: 1px solid #fff;
+.form-input {
+	background-color: #f8f7f7;
+	border-top: 1px solid #000;
+	height: 36px;
+	width: 100%;
+	padding: 6px;
+	&--text {
+		resize: vertical;
+		height: 120px;
+	}
 }
-.button-rm--black {
-	border: 1px solid #000;
-}
-.item-about--transfom {
-	transform: translateX(14%)
+.logo {
+	background-image: url('../img/header/logo.png');
+	background-repeat: no-repeat;
+	width: 196px;
+	height: 124px;
 }

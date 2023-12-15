@@ -8,9 +8,8 @@
 	</head>
 <!-- #endregion -->
 	<body>
-		<section class="main container">
-			<!-- <div class="main__body"> -->
-			<div class="main__logo"></div>
+		<section class="main container" id="home">
+			<div class="main__logo logo"></div>
 			<div class="main__title title title--white">
 				<h1>CLEAR, SMART, ATTRACTIVE DESIGN</h1>
 				<p class="main__small-text">for your app, logo, website</p>
@@ -18,16 +17,15 @@
 			<div class="main__button-rm button-rm button-rm--white">
 				<a class="button-rm__link main__button-link--white" href="#">READ MORE</a>
 			</div>
-			<a href="#" class="main__arrow">↓</a>
-			<!-- </div> -->
+			<a href="#about" class="main__arrow">↓</a>
 		</section>
-		<div class="about">
+		<div class="about" id="about">
 			<div class="about__body">
 				<div class="about__header">
 					<nav class="about__navigation navigation">
-						<ul class="navigation__menu">
+						<ul class="about__nav-size navigation__menu">
 							<li>
-								<a href="#" class="navigation__item-link">HOME</a>
+								<a href="#home" class="navigation__item-link">HOME</a>
 							</li>
 							<li>
 								<a href="#" class="navigation__item-link">ABOUT US</a>
@@ -73,7 +71,7 @@
 					<div class="about__column">
 						<div class="item-about">
 							<div class="item-about__icon">
-								<img class="item-about--transfom" src="./img/about/03.png" alt="" />
+								<img class="item-about--transform" src="./img/about/03.png" alt="" />
 							</div>
 							<div class="item-about__title">MARKETING</div>
 							<div class="item-about__text">We'll help you establish the right goals and 
@@ -90,7 +88,7 @@
 					<h2>PORTFOLIO</h2>
 				</div>
 				<nav class="portfolio__navigation navigation">
-					<ul class="navigation__menu">
+					<ul class="portfolio__nav-size navigation__menu">
 						<li>
 							<a href="#" class="navigation__item-link">ALL</a>
 						</li>
@@ -128,6 +126,54 @@
 					<img src="./img/partners/logo-4.png" alt="" class="partners__logo-alex">
 				</div>
 			</div>
+		</section>
+		<section class="contact" id="contacts">
+			<div class="contact__body">
+				<div class="contact__title title title--black">CONTACT</div>
+				<div class="contact__form">
+					<form class="contact__form-element" action="#">
+						<div class="contact__form-ud">
+							<label class="contact__lable" for="name">YOUR NAME</label>
+							<input class="contact__input-name form-input" type="text" name="name">
+						</div>
+						<div class="contact__form-ud">
+							<label class="contact__lable" for="email">TOUR E-MAIL</label>
+							<input class="contact__input-email form-input" type="email" name="email">
+						</div>
+						<div class="contact__form-message">
+							<label class="contact__lable" for="message">MESSAGE</label>
+							<textarea class="contact__input-message form-input form-input--text" name="message" id="" cols="30" rows="10"></textarea>
+						</div>
+						<div class="contact__form-button">
+							<button class="contact__submit" type="submit">SEND</button>
+						</div>
+					</form>
+					<div class="contact__info">
+						<p class="contact__description">Have an idea for a project? Just looking to 
+							explore and see the possibilities?<br>
+							I'm here to help.
+						</p>
+						<div class="contact__details">
+							<p>Postma Elena</p>
+							<div class="contact__links">
+								<a href="#" class="contact__sm-link">f</a>
+								<a href="#" class="contact__sm-link">in</a>
+							</div>
+							<p><span class="contact__light">e-mail:</span> postma.elena@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="footer">
+			<div class="footer__logo logo"></div>
+			<div class="footer__sm-links">
+				<a href="#home" class="footer__link">Home</a>
+				<a href="#" class="footer__link">Facebook</a>
+				<a href="#" class="footer__link">Linkedin</a>
+				<a href="#contacts" class="footer__link">Contact</a>
+			</div>
+			<p class="footer__copyright">© 2015. All Rights Reserved</p>
 		</section>
 	</body>
 </html>
